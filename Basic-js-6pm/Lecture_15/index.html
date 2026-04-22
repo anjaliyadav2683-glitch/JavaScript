@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Assinment</title>
+</head>
+
+<body>
+    <script>
+    <h2>1. Required Field Check</h2>
+    <form id="form">
+        <input type="text" id="name" placeholder="Enter name">
+        <button type="submit">Submit</button>
+    </form>
+
+    
+        document.getElementById("form").addEventListener("submit", function (e) {
+            let name = document.getElementById("name").value;
+
+            if (name === "") {
+                alert("Name is required");
+                e.preventDefault();
+            }
+        });
+    
+
+    
+
+
+    <h2>2. Prevent Empty Form Submission</h2>
+
+        if (name === "" || email === "") {
+            e.preventDefault();
+        }
+
+
+
+    
+
+
+    // <h2>3. Show Error Message on Submit</h2>
+    <input type="text" id="name">
+    <p id="error"></p>
+
+    
+        if (name === "") {
+            document.getElementById("error").innerText = "Field required";
+            e.preventDefault();
+        }
+    
+    
+
+    // <h2>4. Minimum Length Validation</h2>
+    <form>
+        <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+    </form>
+    
+        if (password.length < 5) {
+            ("Minimum 5 characters required");
+            e.preventDefault();
+        }
+    
+
+    <br>
+
+    // <h2>5. Numeric Input Validation</h2>
+    // <form>
+    //     <input type="number" id="age" placeholder="enter age">
+    // </form>
+
+    
+        let age = document.getElementById("age").value;
+
+        if (isNaN(age)) {
+            alert("Only numbers allowed");
+            e.preventDefault();
+        }
+    
+
+
+
+    // <h2>6. Real-Time Input Validation</h2>
+    
+        document.getElementById("name").addEventListener("input", function () {
+            if (this.value.length < 5) {
+                this.style.border = "2px solid red";
+            } else {
+                this.style.border = "2px solid green";
+            }
+        });
+    <length
+
+
+
+
+</body>
+
+</html>

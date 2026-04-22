@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <script>
+        // Q-1: Basic Prototype Inheritance
+        // const animal = {
+        //     eat() {
+        //         console.log("Animal is eating");
+        //     }
+        // };
+
+        // // const dog = Object.create(animal);
+        // const dog = {};
+        // dog.__proto__ = animal
+
+
+        // dog.eat(); 
+
+
+        // Q-2: Property Lookup via Prototype Chain
+        // const vehicle = {
+        //     wheels: 2
+        // };
+
+        // const bike = Object.create(vehicle);
+
+        // console.log(bike.wheels); 
+
+
+        // Q-3: Manual proto Linking
+        // const Parent = {
+        //     role: "admin" 
+        // };
+
+        // const child = {};
+        // child.__proto__ = parent;
+
+        // console.log(child.role);
+
+
+
+        // Q-4: Constructor Function Prototype
+        // function User(name){
+        //     this.name=name;
+        // }
+        // User.prototype.login = function (){
+        //     console.log(this.name + " name is anjali");
+
+        // };
+        // const User1 = new User("My");
+
+        // User1.login();
+
+
+        // Q-5: ES6 Class Prototype Behavior
+        // class Person {
+        //     greet() {
+        //         console.log("Hello!");
+        //     }
+        // }
+
+        // const p1 = new Person();
+        // const p2 = new Person();
+
+        // p1.greet(); 
+        // p2.greet(); 
+
+        // console.log(p1.greet === p2.greet); 
+
+
+        // Q-6: Prototype Method Sharing Check
+
+        // class Animal {
+        //     speak() {
+        //         console.log("Animal makes a sound");
+        //     }
+        // }
+
+
+        // const a1 = new Animal();
+        // const a2 = new Animal();
+        // const a3 = new Animal();
+
+        // console.log(a1.speak === a2.speak); 
+        // console.log(a2.speak === a3.speak); 
+
+
+
+        // Q-7: Object.create with Shared Methods
+        // const accountProto = {
+        //     getBalance() {
+        //         return this.balance;
+        //     }
+        // };
+
+        // const account1 = Object.create(accountProto);
+        // account1.balance = 1000;
+
+        // const account2 = Object.create(accountProto);
+        // account2.balance = 2500;
+
+        // console.log(account1.getBalance()); 
+        // console.log(account2.getBalance()); 
+
+
+        // Q-8: Overriding Prototype Properties
+
+        // const user = {
+        //     role: "User"
+        // };
+
+        // const admin = Object.create(user);
+
+        // admin.role = "Admin";
+
+        // console.log(user.role);   
+        // console.log(admin.role);  
+
+
+        // Q-9: Prototype Chain Validation
+
+        // class Car {
+        //     drive() {
+        //         console.log("Car is driving");
+        //     }
+        // }
+
+        // const myCar = new Car();
+
+        // console.log(myCar.__proto__ === Car.prototype); 
+
+
+        // Q-10: Dynamic Prototype Extension
+        // class Employee {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        // }
+
+
+        // const e1 = new Employee("Anjali");
+
+        
+        // Employee.prototype.work = function () {
+        //     console.log(this.name + " is working");
+        // };
+
+        // e1.work(); 
+        
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

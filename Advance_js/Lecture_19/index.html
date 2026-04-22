@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <script>
+        // Task 1: Identify Iterables
+        // const arr = [1, 2, 3];
+        // const obj = { a: 1, b: 2 };
+        // const str = "Anjali";
+
+        // console.log(typeof arr[Symbol.iterator] === "function");
+        // console.log(typeof obj[Symbol.iterator] === "function");
+        // console.log(typeof str[Symbol.iterator] === "function");
+
+        // Task 2: Manual Iterator Usage
+        // const arr = [10,20,30];
+        // const iterator = arr[Symbol.iterator]();
+
+        // console.log(iterator.next());
+
+
+
+        // Task 3: Custom Basic Iterable
+        // const range = {
+        //     start: 1,
+        //     end: 5,
+
+        //     [Symbol.iterator]() {
+        //         let current = this.start;
+        //         let end = this.end;
+
+        //         return {
+        //             next() {
+        //                 if (current <= end) {
+        //                     return { value: current++, done: false };
+        //                 } else {
+        //                     return { value: undefined, done: true };
+        //                 }
+        //             }
+        //         };
+        //     }
+        // };
+        // for (const num of range) {
+        //     console.log(num);
+        // }
+
+
+
+        // Task 4: Understand done Flag
+        // const range = {
+        //     start: 1,
+        //     end: 2,
+
+        //     [Symbol.iterator]() {
+        //         let current = this.start;
+        //         let end = this.end;
+
+        //         return{
+        //             next(){
+        //                 if (current <= end) {
+        //                     return { value: current++, done: false };
+        //                 } else {
+        //                     return { value: undefined, done: true };
+        //                 }
+
+        //             }
+        //         }
+        //     }
+        // };
+        // console.log(iterator.next());
+
+
+
+        // Task 5: Iterator Exhaustion
+        // const iterable = [1, 2, 3];
+
+        // const it1 = iterable[Symbol.iterator]();
+        // const it2 = iterable[Symbol.iterator]();
+
+        // console.log(it1.next()); 
+        // console.log(it2.next()); 
+
+
+        // Task 6: Beginner Debugging
+        // const obj = {
+        //     a: 1,
+        //     b: 2,
+        //     [Symbol.iterator]() {
+        //         const entries = Object.entries(this);
+        //         let index = 0;
+
+        //         return {
+        //             next() {
+        //                 if (index < entries.length) {
+        //                     return { value: entries[index++], done: false };
+        //                 }
+        //                 return { value: undefined, done: true };
+        //             }
+        //         };
+        //     }
+        // };
+
+        // for (const item of obj) {
+        //     console.log(item);
+        // }
+
+
+
+        // Task 7: Range Iterable
+        // function range(start, end) {
+        //     return {
+        //         [Symbol.iterator]() {
+        //             let current = start;
+
+        //             return {
+        //                 next() {
+        //                     if (current <= end) {
+        //                         return { value: current++, done: false };
+        //                     }
+        //                     return { done: true };
+        //                 }
+        //             };
+        //         }
+        //     };
+        // }
+        // for (const num of range(1, 5)) {
+        //     console.log(num);
+        // }
+
+
+
+        // Task 8: Generator-Based Iterable
+        // function* range(start, end) {
+        //     for (let i = start; i <= end; i++) {
+        //         yield i;
+        //     }
+        // }
+        // for (const num of range (1,5)) {
+        //     console.log(num);
+
+        // }
+
+
+
+        // Task 9: Paginated Data Iterator
+        // function* paginate(data, pageSize) {
+        //     for (let i = 0; i < data.length; i += pageSize) {
+        //         yield data.slice(i, i + pageSize);
+        //     }
+        // }
+        // const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        // for (const page of paginate(items, 3)) {
+        //     console.log(page);
+        // }
+
+
+        // Task 10: Filtering with Iterables
+        // function* filterEven(iterable) {
+        //     for (const value of iterable) {
+        //         if (value % 2 === 0) {
+        //             yield value; 
+        //         }
+        //     }
+        // }
+        // const data = [1, 2, 3, 4, 5, 6];
+
+        // for (const n of evenOnly(data)) {
+        //     console.log(n);
+        // }
+
+
+        // Task 11: Iterator with Cleanup
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

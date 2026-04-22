@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>1. Declare Variable Using var</h2>
+    <script>
+        var name = "Anjali";
+        console.log(name);
+    </script>
+
+    <hr>
+
+    <h2>2. Declare Variable Using let</h2>
+    <script>
+        let age = 23;
+        console.log(age);
+    </script>
+
+    <hr>
+
+    <h2>3. Declare Constant Using const</h2>
+    <script>
+        const name = 12;
+        console.log(name);
+    </script>
+
+    <hr>
+
+    <h2>4. Difference Between var, let, and const</h2>
+    <p>var: Function-scoped, can be re-declared and updated, hoisted with initialized undefined.</p>
+    <p>let is a block-scoped variable that can be updated but not re-declared.</p>
+    <p>const is used to declare constant variables whose value cannot be changed after assignment.</p>
+
+
+    <hr>
+
+    <h2>5. Global Scope Variable</h2>
+    <script>
+        {
+            const name = 40;
+            console.log(name);
+        }
+    </script>
+
+    <h2>6. Function Scope Using var </h2>
+    <script>
+        function test (){
+            var a = 10;
+        }
+        test(a);
+    </script>
+
+    <hr>
+
+    <h2>7. Block Scope Using let</h2>
+    <script>
+        {
+            let y = 50;
+            console.log(y);
+            
+        }
+    </script>
+
+    <hr>
+
+    <h2>8. Variable Shadowing</h2>
+    <script>
+        let value = 40;
+        {
+            let value = 60;
+            console.log(value);
+            
+        }
+        console.log(value);
+        
+    </script>
+
+    <h2>9. Hoisting Behavior</h2>
+    <script>
+        console.log(a);
+        var a = 5;
+        
+    </script>
+
+    <hr>
+
+    <h2>10. Use "use strict" Mode</h2>
+    <script>
+        let x = 10;
+        console.log(x);
+        
+    </script>
+
+</body>
+
+</html>

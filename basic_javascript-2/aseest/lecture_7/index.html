@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <script>
+        // Task 1: Create a Simple Object
+        // const person = {
+        //     name: "Anjali",
+        //     age: 23
+        // }
+        // console.log(person);
+
+
+        // Task 2: Access Object Properties
+        // const person = {
+        //     name :"Anjali",
+        //     age : 23
+        // }
+        // console.log(person.name);
+        // console.log?(person["age"])
+
+
+        // Task 3: Add a Method
+        // const person = {
+        //     name: "Anjali",
+        //     age:23,
+        //     greet: function(){
+        //         console.log("Hello!");
+
+        //     }
+        // }
+        // person.greet()
+
+
+        // Task 4: Use this Inside a Method
+        // const person = {
+        //     name: "Anjali",
+        //     age: 23,
+        //     greet:function (){
+        //         console.log("Hello,I am " + this.name);
+
+        //     }
+        // }
+        // person.greet()
+
+
+        // Task 5: Update Object Properties
+        // person.age = 23
+        // console.log(person.age);
+
+
+        // Task 6: Reference Behavior
+        // const user1 = {name:"Anjali"}
+        // const user2 = user1
+
+        // user2.name = "Raj"
+
+        // console.log(user1.name);
+
+
+        // Task 7: Factory Function
+        // function createuser() {
+        //     return{
+        //         name,
+        //         login(){
+        //             console.log(name + "logged in");
+
+        //         }
+        //     }
+        // }
+        // const u1 = createuser("Anjali")
+        // u1.login()
+
+
+        // Task 8: Multiple Object Instances
+        // const u1 = createUser("Anjali")
+        // const u2 = createUser("Raj")
+
+        // u1.login()
+        // u2.login()
+
+        // console.log(u1 === u2);
+
+
+        // Task 9: Method Using this
+        // function createUser(name,price){
+        //     return{
+        //         name,
+        //         price,
+        //         getpriceWithTax(){
+        //             return this.price * 1.18
+        //         }
+        //     }
+        // }
+        // const p = createUser("Phone",10000)
+        // console.log(p.getpriceWithTax);
+
+
+        // Task 10: Arrow Function Pitfall
+        // const user = {
+        //     name: "Anjali",
+        //     greet: () => {
+        //         console.log(this.name);
+
+        //     }
+        // }
+        // user.greet()
+
+
+
+        // Task 11: Fix the this Issue
+        // const user = {
+        //     name: "Anjali",
+        //     greet() {
+        //         console.log(this.name);
+
+        //     }
+        // }
+        // user.greet()
+
+
+        // Task 12: Object as Configuration
+        // const config = {
+        //     name: "Anajli",
+        //     timeout:5000
+        // }
+        // function fetchData(){
+        //     console.log("Calling",config.name);
+
+        // }
+
+
+        // Task 13: Nested Objects
+        // const user = {
+        //     name: "Anjali",
+        //     Address: {
+        //         city:"Ahmedabad",
+        //         pincode: 380063
+        //     }
+        // }
+        // console.log(user.Address.city);
+
+
+        // Task 14: Shared Reference Bug
+        // const defaultSettings = {
+        //     theme: "light"
+        // }
+
+        // const user1 = defaultSettings
+        // const user2 = defaultSettings
+
+        // user1.theme = "dark"
+
+        // console.log(user2.theme);
+
+
+        // Task 15: Object Factory with Defaults
+        // function createUser({
+        //     name = "Guest",
+        //     role = "user"
+        // } = {}) {
+        //     return{
+        //         name,
+        //         role
+        //     }
+        // }
+
+        // const u1 = createUser({name: "Anjali"})
+        // const u2 = createUser()
+
+        // console.log(u1,u2);
+
+
+        // Task 16: Prevent Accidental Mutation
+
+
+        // Task 17: Method Context Loss
+        // const user = {
+        //     name: "Rahul",
+        //     greet() {
+        //         console.log(this.name)
+        //     }
+        // }
+
+        // setTimeout(user.greet, 1000) 
+
+
+        // Task 18: Fix Context Loss
+        // setTimeout(user.greet.bind(user), 1000)
+
+
+        // Task 19: Production-Style Object Design
+        // function createAuthService(apiBase) {
+        //     return {
+        //         apiBase,
+        //         token: null,
+
+        //         login(username) {
+        //             this.token = "token123"
+        //             console.log(username + " logged in")
+        //         },
+
+        //         isAuthenticated() {
+        //             return this.token !== null
+        //         }
+        //     }
+        // }
+
+        // const auth = createAuthService("/api")
+        // auth.login("Rahul")
+        // console.log(auth.isAuthenticated())
+
+
+        // Task 20: Real-World Bug Fix
+        // const addToCart = cart.add.bind(cart)
+        // addToCart("Phone")
+
+        // console.log(cart.items)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

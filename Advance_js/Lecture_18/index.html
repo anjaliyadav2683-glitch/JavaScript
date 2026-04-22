@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <script>
+        // Task 1: Basic Parent–Child Inheritance
+        // class Animal {
+        //     eat() {
+        //         console.log("Eating...");
+        //     }
+        // }
+
+        // class Dog extends Animal {
+        //     bark() {
+        //         console.log("Barking...");
+        //     }
+        // }
+
+        // const dog = new Dog();
+        // dog.eat();  
+        // dog.bark();  
+
+        // Task 2: Using super() in Constructor
+        // class Person {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        // }
+
+        // class Student extends Person {
+        //     constructor(name, age, rollNumber) {
+        //         super(name, age); 
+        //         this.rollNumber = rollNumber;
+        //     }
+        // }
+
+        // // Usage
+        // const student1 = new Student("Anjali", 20, 101);
+
+        // console.log(student1.name);       
+        // console.log(student1.age);        
+        // console.log(student1.rollNumber); 
+
+        // Task 3: Inherited Method Access
+        // class Vehicle {
+        //     start() {
+        //         console.log("Vehicle started");
+        //     }
+        // }
+        // class Car extends Vehicle { }
+
+        // const myCar = new Car();
+        // myCar.start(); 
+
+
+        // Task 4: Method Overriding
+        // class Shape {
+        //     getArea() {
+        //         return 0; 
+        //     }
+        // }
+        // class Rectangle extends Shape {
+        //     constructor(length, width) {
+        //         super();
+        //         this.length = length;
+        //         this.width = width;
+        //     }
+
+        //     getArea() {
+        //         return this.length * this.width; 
+        //     }
+        // }
+        // const rect = new Rectangle(10, 5);
+        // console.log(rect.getArea()); 
+
+
+
+        // Task 5: Understanding Prototype Chain
+        // class Parent {
+        //     sayHello() {
+        //         console.log("Hello from Parent");
+        //     }
+        // }
+
+        // class Child extends Parent {
+        //     sayHi() {
+        //         console.log("Hi from Child");
+        //     }
+        // }
+
+
+
+        // Task 6: Prevent Beginner Mistakes
+        // class Parent {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        // }
+
+        // class Child extends Parent {
+        //     constructor(name) {
+        //         super(name); 
+        //         this.name = name;
+        //     }
+        // }
+
+        // const c = new Child("Anjali");
+        // console.log(c.name);
+
+
+
+        // Task 7: Base Utility Class
+        // class ProductService extends Logger {
+        //     addProduct(productName) {
+        //         this.log(`Product added: ${productName}`);
+        //     }
+        // }
+
+
+
+        // Task 8: Abstract-Like Base Class
+        // class Payment {
+        //     process() {
+        //         throw new Error("process() must be implemented by child class");
+        //     }
+        // }
+        // class CardPayment extends Payment {
+        //     process() {
+        //         return "Processing card payment...";
+        //     }
+        // }
+
+        // class UPIPayment extends Payment {
+        //     process() {
+        //         return "Processing UPI payment...";
+        //     }
+        // }
+        // const card = new CardPayment();
+        // console.log(card.process());
+
+        // const upi = new UPIPayment();
+        // console.log(upi.process());
+
+
+
+        // Task 9: Module-Based Inheritance
+        // BaseService.js
+        // export default class BaseService {
+        //     constructor(serviceName) {
+        //         this.serviceName = serviceName;
+        //     }
+
+        //     log(message) {
+        //         console.log(`[${this.serviceName}]: ${message}`);
+        //     }
+        // }
+
+        // OrderService.js
+        // import BaseService from "./BaseService.js";
+
+        // export default class OrderService extends BaseService {
+        //     constructor() {
+        //         super("OrderService"); // call parent constructor
+        //     }
+
+        //     createOrder(orderId) {
+        //         this.log(`Order created with ID ${orderId}`);
+        //     }
+        // }
+
+
+
+        // Task 10: Override with super
+        // class Employee {
+        //     constructor(baseSalary) {
+        //         this.baseSalary = baseSalary;
+        //     }
+
+        //     getSalary() {
+        //         return this.baseSalary;
+        //     }
+        // }
+        // class Manager extends Employee {
+        //     constructor(baseSalary, bonus) {
+        //         super(baseSalary); 
+        //         this.bonus = bonus;
+        //     }
+
+        //     getSalary() {
+        //         return super.getSalary() + this.bonus;
+        //     }
+        // }
+        // const emp = new Employee(30000);
+        // console.log("Employee Salary:", emp.getSalary());
+
+        // const mgr = new Manager(30000, 10000);
+        // console.log("Manager Salary:", mgr.getSalary());
+
+
+
+        // Task 11: Shared Authentication Logic
+        // class User {
+        //     constructor(username) {
+        //         this.username = username;
+        //     }
+
+        //     login() {
+        //         console.log(`${this.username} logged in successfully`);
+        //     }
+        // }
+        // class Admin extends User {
+        //     constructor(username) {
+        //         super(username);
+        //         this.role = "Admin";
+        //     }
+
+        //     deleteUser(user) {
+        //         console.log(`Admin ${this.username} deleted user: ${user}`);
+        //     }
+        // }
+        // const admin = new Admin("Anjali");
+        // admin.login();               
+        // admin.deleteUser("Raj");    
+
+
+        // Task 13: Debug Inheritance Conflict
+        // In inheritance conflicts, the child class property takes priority over the parent class property when accessed directly.This is because the child class overrides the parent’s definition, allowing specialized behavior
+
+
+        // Task 16: Composition vs Inheritance
+        // class Logger {
+        //     log(message) {
+        //         console.log("[LOG]", message);
+        //     }
+        // }
+
+        // class OrderService extends Logger {
+        //     createOrder() {
+        //         this.log("Order created");
+        //     }
+        // }
+        // const order = new OrderService();
+        // order.createOrder();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

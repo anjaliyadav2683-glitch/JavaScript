@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>1. Select by ID and Change Text</h2>
+    <p id="demo">old text</p>
+    <script>
+        document.getElementById("demo").innerText = "Hello Dom"
+    </script>
+
+    <hr>
+
+    <h2>2. Change Style Using ID</h2>
+    <div id="box">Box</div>
+    <script>
+        const box = document.getElementById("box");
+        box.style.backgroundColor = "blue";
+        box.style.padding = "20px";
+        box.style.color = "white";
+    </script>
+
+    <hr>
+
+    <h2>3. Select First Element with querySelector</h2>
+    <h1>Heading</h1>
+    <script>
+        document.querySelector("h1").style.color = "red"
+    </script>
+
+    <hr>
+
+    <h2>4. Button Click → Text Update</h2>
+    <p id="text">Hello</p>
+    <button id="btn">Click</button>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("text").innerText = "Button Clicked";
+        }
+    </script>
+
+
+    <hr>
+
+    <h2>5. Hide an Element</h2>
+    <p class="hide">Hide me</p>
+
+    <script>
+        document.querySelector(".hide").style.display = "none";
+    </script>
+
+
+    <hr>
+
+
+    <h2>6. Select Class Using querySelector</h2>
+    <div class="card">Card</div>
+    <script>
+        const card = document.querySelector(".card");
+        card.style.border = "2px solid black";
+        card.style.boxShadow = "0 0 10px gray";
+    </script>
+
+    <hr>
+
+
+    <h2>7. Update Input Value</h2>
+    <input id="name" />
+
+    <script>
+        document.getElementById("name").value = "Anjali";
+    </script>
+
+
+    <hr>
+
+    <h2>8. Toggle Text on Button Click</h2>
+    <p class="state">OFF</p>
+    <button id="toggle">Toggle</button>
+    <script>
+        const text = document.querySelector(".state");
+
+        document.getElementById("toggle").onclick = () => {
+            text.innerText = text.innerText === "OFF" ? "ON" : "OFF";
+        };
+    </script>
+
+    <hr>
+
+    <h2>9. Select Nested Element</h2>
+    <div>
+        <span>Text</span>
+    </div>
+
+    <script>
+        document.querySelector("span").style.backgroundColor = "red";
+    </script>
+
+
+    <hr>
+
+
+    <h2>10. Highlight Active Menu Item</h2>
+    <li class="menu">Home</li>
+    <script>
+        document.querySelector(".menu").classList.add("active");
+    </script>
+
+
+    <hr>
+
+
+    <h2>11. Form Validation Message</h2>
+    <input id="input" />
+    <p id="error"></p>
+    <button id="submit">Submit</button>
+
+    <script>
+        document.getElementById("submit").onclick = () => {
+            const value = document.getElementById("input").value;
+
+            if (value === "") {
+                document.getElementById("error").innerText = "Name required!";
+            }
+        };
+    </script>
+
+
+    <hr>
+
+    <h2>12. Theme Switcher</h2>
+
+    <hr>
+
+    <h2>13. Dynamic Character Counter</h2>
+    <textarea id="textArea"></textarea>
+    <p>Count: <span id="count">0</span></p>
+
+    <script>
+        const textArea = document.getElementById("textArea");
+
+        textArea.oninput = () => {
+            document.getElementById("count").innerText = textArea.value.length;
+        };
+    </script>
+
+
+    <hr>
+
+    <h2>14. Modal Open/Close</h2>
+    <div id="modal" style="display:none;">Modal</div>
+    <button id="open">Open</button>
+    <button id="close">Close</button>
+    <script>
+        document.getElementById("open").onclick = () => {
+            document.getElementById("modal").style.display = "block";
+        };
+
+        document.getElementById("close").onclick = () => {
+            document.getElementById("modal").style.display = "none";
+        };
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

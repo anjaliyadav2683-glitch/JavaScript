@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Assignment</title>
+</head>
+
+<body>
+    <script>
+        // Task 1: Create Your First Array
+        // const num = [1,2,3,4,5];
+
+        // console.log(num);
+
+
+        // Task 2: Empty Array Initialization
+        // const arr = [];
+        // arr.push(1);
+        // arr.push(2);
+        // arr.push(3);
+
+        // console.log(arr);
+
+
+
+        // Task 3: Access by Index
+        // const fruit = ["Apple","mango","orange","banana"];
+
+        // console.log("First",fruit[0]);
+        //  console.log("Last",fruit[fruit.length - 1]);
+
+
+        // Task 4: Array Length
+        // const items = [1,2,3];
+        // console.log("Before",items.length);
+
+        // items.push(4);
+
+        // console.log("After",items.length);
+
+
+        // Task 5: Mixed-Type Array
+        // const mixed = ["hello",42,true];
+        // console.log(mixed);
+        // Ans:Harder to maintain,type confusion in larger apps
+
+
+        // Task 6: Constructor Pitfall
+        // const arr = new Array(5);
+        // console.log(arr);
+        // console.log(arr.length);
+        // Ans:Creates empty slots, not actual values → sparse array.
+
+
+        // Task 7: Array with Default Values
+        // const values = new Array(5).fill(0);
+        // console.log(values);
+
+
+        // Task 8: Programmatic Array Creation
+        // const num = Array.from({length:10},(_,i)=> i + 1);
+        // console.log(num);
+
+
+        // Task 9: Create Array from String
+        // const str = "hello";
+        // const chars = str.split("");
+
+        // console.log(chars);
+
+
+
+        // Task 10: Sparse Array Creation
+        // const spars = [];
+        // spars[5] = "values";
+
+        // console.log(spars);
+        //  console.log("Length",spars.length);
+
+
+        // Task 11: Pre-Allocated Array
+        // const arr = new Array(5);
+
+        // for(let i = 0; i < arr.length; i++){
+        //     arr[i] = i * 2;
+        // }
+        // console.log(arr);
+
+
+        // Task 12: Clone an Array
+        // const original = [1,2,3];
+        // const copy = [...original];
+
+        // console.log(copy);
+
+
+        // Task 13: Dynamic Data Collection
+        // const result = [];
+
+        // for (let i = 1; i <= 10; i++){
+        //     if(i % 2 === 0){
+        //         result.push(i);
+        //     }
+        // }
+        // console.log(result);
+
+
+        // Task 14: Length Manipulation
+        // const arr = [1,2,3,4,5];
+
+        // arr.length = 3;
+        // console.log(arr);
+
+        // arr.length = 6;
+        // console.log(arr);
+        // Ans:removes elements,creates empty slots
+
+
+        // Task 15: Configuration-Based Array Creation
+        // const config = {maxItems: 5};
+
+        // const items = Array.from({length: config.maxItems},()=>null);
+
+        // console.log(items);
+
+        //   Task 16: Placeholder Data for UI
+        // function createSkeleton(count) {
+        //         return Array.from({ length: count }, (_, i) => ({
+        //             id: i + 1,
+        //             loading: true
+        //         }));
+        //     }
+
+        // console.log(createSkeleton(5));
+
+
+        // Task 17: Array Factory Function 
+        // function createScoreArray(count) {
+        //     return Array(count).fill(0);
+        // }
+
+        // console.log(createScoreArray(3));
+
+
+        // Task 18: Avoiding Sparse Arrays
+        // const arr = Array.from({length:6},()=>null);
+        // arr[5] = "data";
+
+        // console.log(arr);
+
+
+        // Task 19: Large Dataset Preparation
+        // const size = 1000;
+
+        // const data = new Array(size);
+
+        // for (let i = 0; i < size; i++) {
+        //     data[i] = i;
+        // }
+
+        // console.log(data.length);
+        // Ans:pre-allocated memory, no resizing overhead
+
+
+        // Task 20: Real-World Bug Fix
+        // const items = Array.from({length:5},()=> 0);
+
+        // const mapped = items.map(x => x + 1);
+
+        // console.log(mapped);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

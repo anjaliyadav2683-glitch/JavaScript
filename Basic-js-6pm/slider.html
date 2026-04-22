@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .slider {
+            display: flex;
+            text-align: center;
+            gap: 20px;
+        }
+
+        button {
+            margin: 60px;
+            padding: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <button onclick="preysslides()"> =></button>
+        <img id="slider" src="./Assest/Images/img-1.jpg" alt="">
+        <button onclick="nextslider()"> <= </button>
+    </div>
+    <script>
+        const images = ["./Assest/Images/img-2.jpg", "./Assest/Images/img-3.jpg", "./Assest/Images/img-4.jpg", "./Assest/Images/img-5.jpg"]
+        let hello = 0;
+        const sliderimg = document.getElementById("slider");
+        function showimg(index) {
+            sliderimg.src = images[index];
+        }
+        function nextslider() {
+            hello =(hello + 1) % images.length;
+            showimg(hello);
+        }
+        function preysslides() {
+            hello = (hello - 1 + images.length) % images.length;
+            showimg(hello);
+        }
+        setInterval(function(){
+            hello++;
+            if (hello >= images.length) {
+                hello = 0
+                
+            } 
+            slider.src = images[hello];
+        },2000);
+       
+
+    </script>
+
+</body>
+
+</html>

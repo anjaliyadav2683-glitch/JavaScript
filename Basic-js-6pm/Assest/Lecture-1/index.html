@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <h2>1. First Script Execution</h2>
+    <script>
+        console.log("First");
+        console.log("Second");
+        console.log("Third");
+    </script>
+    <hr>
+
+    <h2>2. Inline vs External Script</h2>
+    <p>Inline JavaScript code is embedded directly within an HTML document using
+        <!-- <script> tags, or via HTML attributes like onclick.External JavaScript is stored in a separate file with a.js extension and linked to the HTML via the < script src = "..." > tag. </p > -->
+
+        <hr>
+    <h2>3. Execution Order Prediction</h2>
+    <script>
+        console.log("One");
+        console.log("Two");
+        console.log("Three");
+    </script>
+    <hr>
+    <h2>3.Blocking Script Experiment</h2>
+    <script>
+        for (let i = 0; i < 1000000000; i++) { }
+
+        console.log("Done");
+    </script>
+    JS is single-threaded → heavy work blocks everything
+
+    <hr>
+
+    <h2>5.Script Placement Test</h2>
+    <ol>
+        <li>Page may load slower</li>
+        <li>Page loads first → better UX</li>
+    </ol>
+
+    <hr>
+
+    <h2>6.Async vs Sync Comparison</h2>
+    <script>
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("Async");
+        }, 0);
+
+        console.log("End");
+    </script>
+    setTimeout goes to callback queue → runs later
+
+    <h2>7.UI Freeze Simulation</h2>
+    <button onclick="heavyTask()">Click Me</button>
+
+    <script>
+        function heavyTask() {
+            for (let i = 0; i < 1e9; i++) { }
+            console.log("Finished");
+        }
+    </script>
+    Click button → UI freezes
+
+    <hr>
+
+    <h2>8.Non-Blocking Refactor</h2>
+    Break big task → UI stays responsive
+
+    <hr>
+
+    <h2>9.Script Execution Timeline</h2>
+    <ol>
+        <li>Open Chrome DevTools</li>
+        <li>Go to Performance tab</li>
+        <li>Click Record</li>
+        <li>Run script</li>
+    </ol>
+    <ul>
+        <li>Blocking time</li>
+        <li>Execution duration</li>
+    </ul>
+    <hr>
+    <h2>10.Execution Debugging</h2>
+    <script>
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("Async 1");
+        }, 1000);
+
+        console.log("End");
+    </script>
+
+    <hr>
+
+    <h2>11.Predict Execution</h2>
+    <script>
+        console.log("A");
+
+        setTimeout(() => console.log("B"), 0);
+
+        console.log("C");
+    </script>
+
+    <hr>
+    <h2>12.Refactor Blocking Code</h2>
+    <script>
+        function runTask() {
+            let i = 0;
+
+            function process() {
+                for (let j = 0; j < 1000000; j++) i++;
+
+                if (i < 1e9) {
+                    requestAnimationFrame(process);
+                }
+            }
+
+            process();
+        }
+    </script>
+
+    <hr>
+    <h2>13,Script Load Optimization</h2>
+    <ul>
+        <li>Runs after HTML loads</li>
+        <li>Maintains order</li>
+    </ul>
+    <h3>async</h3>
+    <ul>
+        <li>Runs anytime</li>
+        <li>Order not guaranteed</li>
+    </ul>
+
+    <hr>
+
+    <h2>14.Event-Driven Execution</h2>
+    Code runs only when needed
+
+    <hr>
+
+    <h2>15.Execution Flow Documentation</h2>
+    <ol>
+        <li>HTML loads</li>
+        <li>Script loads</li>
+        <li>Sync code runs</li>
+        <li>Async callbacks queued</li>
+        <li>Event loop executes callbacks</li>
+    </ol>
+
+    <hr>
+
+    <h2>16.Performance Audit</h2>
+    Use DevTools → Performance tab
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

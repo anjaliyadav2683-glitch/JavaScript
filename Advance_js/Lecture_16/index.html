@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <script>
+        // Task 1: Basic Closure
+        // function outer() {
+        //     let count = 0;  
+
+        //     function inner() {   
+        //         count++;        
+        //         console.log(count);
+        //     }
+
+        //     return inner;   
+        // }
+
+        // const counter = outer();  
+
+        // counter(); 
+        // counter(); 
+        // counter(); 
+
+
+        // Task 2: Access Parent Variable
+        // function parent() {
+        //     let message = "Hello from parent ";
+
+        //     function child() {
+        //         console.log(message);
+        //     }
+
+        //     return child;
+        // }
+
+        // const fn = parent(); 
+        // fn();                 
+
+
+        // Task 3: Multiple Calls, Same Closure
+        // function createCounter() {
+        //     let count = 0;   
+
+        //     return function () {
+        //         count++;
+        //         console.log("Count:", count);
+        //     };
+        // }
+
+        // const counter = createCounter();  
+
+        // counter(); 
+        // counter(); 
+        // counter(); 
+
+
+        // Task 4: Independent Closures
+        // function counterFactory() {
+        //     let count = 0; 
+
+        //     return function () {
+        //         count++;
+        //         console.log("Count:", count);
+        //     };
+        // }
+
+        // const counter1 = counterFactory();
+        // const counter2 = counterFactory();
+
+        // counter1(); 
+        // counter1(); 
+
+        // counter2(); 
+
+        // counter1(); 
+
+        // counter2(); 
+
+
+        // Task 5: Lexical Scope vs Global Scope
+        // let globalVar = "I am Global";
+
+        // function outer() {
+        //     let localVar = "I am Local (Closure)";
+
+        //     return function inner() {
+        //         console.log(globalVar); 
+        //         console.log(localVar);  
+        //     };
+        // }
+
+        // const fn = outer();
+        // fn();
+
+
+        // Task 7: Closure in Loop(Bug Detection)
+        // for (var i = 1; i <= 3; i++) {
+        //     setTimeout(function () {
+        //         console.log(i);
+        //     }, 1000);
+        // }
+
+
+        // Task 8: Fix Loop Closure Issue
+        // for (let i = 1; i <= 3; i++) {
+        //     setTimeout(function () {
+        //         console.log(i);
+        //     }, 1000);
+        // }
+
+
+        // Task 9: Function Factory
+        // function createMultiplier(factor) {
+        //     return function (number) {
+        //         return number * factor;
+        //     };
+        // }
+        // const double = createMultiplier(2);
+        // const triple = createMultiplier(3);
+
+        // console.log(double(10));  
+        // console.log(triple(20));  
+
+
+        // Task 10: Configuration Function
+        // function createLogger(config) {
+
+        //     return function (message) {
+        //         console.log("App:", config.appName);
+        //         console.log("Version:", config.version);
+        //         console.log("User:", config.user);
+        //         console.log("Message:", message);
+        //         console.log("-------------------");
+        //     };
+        // }
+        // const logger = createLogger({
+        //     appName: "ShopApp",
+        //     version: "1.2.0",
+        //     user: "Anjali"
+        // });
+
+        // logger("Page Loaded");
+        // logger("Button Clicked");
+
+
+
+        
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

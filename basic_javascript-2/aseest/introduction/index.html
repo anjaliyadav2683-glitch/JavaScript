@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!-- <script>
+        console.log("Script in HEAD loaded");
+        document.getElementById("text").innerHTML = "Changed!";
+    </script> -->
+</head>
+
+<body>
+    <script>
+        // 1.Write a JavaScript file that logs three messages.
+        // console.log("A");
+        // console.log("B");
+        // console.log("C");
+
+
+        // 2.Add one script inline in HTML and one external JS file.
+        // console.log("Anjali");
+
+
+        // 3.Predict output before running:
+        // console.log("One");
+        // console.log("Two");
+        // console.log("Three");
+        // Ans:JavaScript executes code line by line (top to bottom) in a synchronous manner unless something asynchronous is involved
+
+
+        // 4.Add a large for loop before a console.log.
+        // console.log("Start");
+
+        // setTimeout(() => {
+        //     console.log("Later");
+        // }, 1000);
+
+        // console.log("End");
+    </script>
+
+    <!-- // 5.Place the script in <head> and then before </body>. -->
+    <!-- <h1 id="text">Hello JS</h1> -->
+
+
+    <!-- 6.Compare output of synchronous logs vs setTimeout. -->
+    <!-- <script>
+                console.log("start");
+                setTimeout(()=>{
+                    console.log("Later");
+                },5000);
+
+                console.log("end");
+                
+             </script> -->
+
+
+    <!-- 7.Create a button click that runs heavy JS. -->
+    <!-- <button onclick="runHeavyTask()">Click</button>
+    <script>
+        function runHeavyTask() {
+            console.log("Started Heavy Task");
+
+            let total = 0;
+            for (let i = 0; i < 0; i) {
+                total += i;
+            }
+
+            console.log("Finished", total);
+        }
+
+    </script> -->
+
+
+    <!-- 8.Refactor heavy logic to avoid freezing the UI. -->
+    <!-- Ans:When heavy JavaScript runs on the main thread, it blocks rendering and user interactions -->
+
+
+
+    <!-- 9.Use browser DevTools to record execution timeline. -->
+    <!-- Ans:Open DevTools,Open your webpage, Press F12 OR ,Right click → Inspect,show console. -->
+
+
+    <!-- 10.Debug incorrect output caused by async timing. -->
+    <!-- <script>
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+                console.log(i);
+            }, 1000);
+        }
+
+    </script> -->
+
+
+    <!-- 11.Given mixed sync/async code, write expected output. -->
+    <!-- <script>
+        console.log("A");
+
+        setTimeout(() => {
+            console.log("B");
+        }, 0);
+
+        Promise.resolve()
+            .then(() => {
+                console.log("C");
+                return Promise.resolve();
+            })
+            .then(() => {
+                console.log("D");
+            });
+
+        console.log("E");
+
+    </script>
+ -->
+
+    <!-- 12.Break a long task into smaller execution chunks. --> ?
+    <!-- <button id="start">Start</button>
+    <script>
+        function heavyTaskChunked(total = 1e9, chunk = 1e6) {
+            let done = 0;
+
+            function run() {
+                const end = Math.min(done + chunk, total);
+
+                while (done < end) {
+                    done++;
+                }
+
+                if (done < total) {
+                    setTimeout(run, 0); 
+                } else {
+                    console.log("Done without freeze");
+                }
+            }
+
+            run();
+        }
+
+        start.onclick = () => heavyTaskChunked();
+    </script> -->
+
+
+    <!-- 13. Script Load Optimization -->
+    <!-- <script defer src="app.js"></script>
+
+    <script async src="analytics.js"></script> -->
+
+
+    <!-- 14. Event-Driven Execution -->
+
+    <!-- <script>
+
+        // let a = "hii"
+        function name(a) {
+            console.log(a);
+            
+        }
+        name("hii")
+
+    </script> -->
+
+
+    <!-- 15. Execution Flow Documentation -->
+    <!-- Ans : The script executes in a predictable order following JavaScript’s single-threaded execution model.
+    Synchronous code runs first from top to bottom during the initial parse phase.
+    Event listeners and asynchronous callbacks (such as timers or network responses) are registered during this phase
+    but executed later via the event loop.
+    Deferred or dynamically imported modules execute after the DOM is ready, preventing render blocking.
+    This ensures that critical UI rendering occurs before non-essential logic, improving perceived performance and
+    responsiveness. -->
+
+
+    <!-- 16. Performance Audit Task -->
+    <!-- <ol>
+        <li>Open Pages</li>
+        <li>Press F12 -> Performance</li>
+        <li>Click Record</li>
+        <li>Reload page</li>
+        <li>Stop recording</li>
+        <li>Check:</li>
+        <ul>
+            <li>Long tasks</li>
+            <li>Script evalution time</li>
+            <li>Blocking time</li>
+        </ul>
+     </ol> -->
+
+
+    <!-- 17. Execution-Related Bug Fix -->
+    <!-- <script>
+        fetch("/api")
+            .then(r => r.json())
+            .then(d => {
+                console.log(d)
+            })
+    </script> -->
+    <!-- Ans:Fetch executes asynchronously; logging occurred before promise resolution. -->
+
+
+    <!-- 18. Third-Party Script Impact Test -->
+     <!-- <ul>
+        <li>Network - Script size</li>
+        <li>Coverage - unused code</li>
+        <li>Performance - blocking time</li>
+     </ul> -->
+
+     
+     <!-- 19. Execution Best-Practice Refactor -->
+      <!-- Problems:
+      <ul>
+        <li>Blocks rendring</li>
+        <li>Haevy sync work</li>
+        <li>Runs before DOM ready risk</li>
+      </ul> -->
+      <!-- Ans:Runs after DOM ready,uses idle time,No blocking. -->
+
+
+      <!-- 20. Production-Ready Mini Project -->
+       <!-- <ul>
+        <li>Event loop awareness</li>
+        <li>Async execution</li>
+        <li>Performance profiling</li>
+        <li>Long-task mitigation</li>
+        <li>Dependency impact</li>
+        <li>Non-blocking architecture</li>
+        <li>Execution-safe DOM access</li>
+       </ul> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
