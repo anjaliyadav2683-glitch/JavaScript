@@ -1,11 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Variable Assignment</title>
 </head>
+
 <body>
-    
+    <h2>Task 1: Declare and Log</h2>
+    <!-- <script>
+        var a = 10;
+        let b = 20;
+        const c = 30;
+        console.log(a,b,c);
+        
+    </script> -->
+
+    <h2>Task 2: Reassignment Check</h2>
+    <!-- <script>
+        // let x = 10;
+        // x = 20;
+        const a = 20;
+        a = 20;
+        
+        console.log(a);
+    </script> -->
+    Ans:Let can be reassign and const can be not reassign.
+
+    <h2>Task 3: Block Scope Test</h2>
+    <!-- <script>
+        if (true) {
+            var a = 1;
+            let b = 2;
+            const c = 3;
+            console.log(b);
+            console.log(c);
+        }
+        console.log(a);
+    </script> -->
+    Ans:var is a function scope and let,const is a block scope.
+
+    <h2>Task 4: Redeclaration Experiment</h2>
+    <script>
+        // var a = 10;
+        // var a = 10;
+
+        // // let b = 20;
+        // // let b = 20;
+        // console.log(b);
+    </script>
+    Ans: var is Redeclaration let can do not Redeclaration.
+
+    <h2>Task 5: Hoisting Observation</h2>
+    <script>
+        // console.log(a);
+        // var a = 10;
+        // console.log(a);
+        // let a = 10;
+    </script>
+    Ans:var is Hoisting with undefine, let is TDZ.
+
+
+    <h2>Task 6: Const Object Mutation</h2>
+    <!-- <script>
+        const user = {
+            name:"Anjali",
+            Age : 23
+        };
+        console.log(user);
+    </script> -->
+
+
+    <h2>Task 7: Loop Counter Bug</h2>
+    <script>
+    </script>
+
+    <h2>Task 8: TDZ Error Investigation</h2>
+    <!-- <script>
+        console.log(a);
+        let a = 25;
+    </script> -->
+
+
+    <h2>Task 9: Function Scope vs Block Scope</h2>
+    <!-- <script>
+        function user() {
+            let a = 2;
+            var b = 4;
+        }
+        console.log(user);
+
+        if (name) {
+            // let x = 1;
+            var y = 2;
+        }
+         console.log(y);
+    </script> -->
+
+
+    <h2>Task 10: Const Configuration Object</h2>
+    <!-- <script>
+        const config = {
+            name : "Anjali",
+            timeout:10000
+        }
+        config.timeout = 20000;
+    </script> -->
+
+
+    <h2>Task 11: Variable Shadowing</h2>
+    <!-- <script>
+        let value = 10;
+
+        function test() {
+            let value = 20;
+            console.log(value); 
+        }
+        console.log(value);
+        
+    </script> -->
+
+
+    <h2>Task 12: Replace var with let/const</h2>
+    <!-- <script>
+        var a = "Anjali"
+        var b = 23;
+
+        const a = "Anjali"
+        let age = 23;
+    </script> -->
+
+
+    <h2>Task 13: Counter Logic</h2>
+    <!-- <script>
+       let count = 0;
+       function increment() {
+        count++;
+        console.log(count);
+        console.log(count);
+       } 
+    </script> -->
+
+
+    <h2>Task 14: Prevent Accidental Reassignment</h2>
+    <!-- <script>
+        let price = 3.14
+        console.log(price);
+
+        const pi = 9.67777
+        console.log(pi);
+        
+    </script> -->
+
+    <h2>Task 15: App Initialization Variables</h2>
+    <!-- <script>
+        const name = "my app"
+        let num = 1
+        let product = "perfume" 
+    </script> -->
+
+
+    <h2>Task 16: Module Scope Isolation</h2>
+    <script>
+
+    </script>
+
+
+    <h2>Task 17: Async Data Handling</h2>
+    <script>
+
+    </script>
+
+    <h2>Task 18: Performance-Safe Loops</h2>
+    <!-- <script>
+        const numbers = [1, 2, 3];
+
+        for (const num of numbers) {
+            console.log(num);
+        }
+    </script> -->
+
+
+
 </body>
+
 </html>
